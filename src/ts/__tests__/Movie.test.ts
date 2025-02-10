@@ -96,8 +96,8 @@ describe('Movie Class Comprehensive Tests', () => {
     cart.add(movie2);
     
     expect(cart.items).toHaveLength(2);
-    expect(cart.items[0]).toBeInstanceOf(Movie);
-    expect(cart.items[1].name).toBe('Довод');
+    expect(cart.items[0].item).toBeInstanceOf(Movie);
+    expect(cart.items[1].item.name).toBe('Довод');
   });
 
   test('should handle extreme duration values', () => {
@@ -205,5 +205,7 @@ describe('Movie Class Comprehensive Tests', () => {
     expect(imaxMovie.imax).toBe(true);
     expect(nonImaxMovie.imax).toBe(false);
   });
+  
 });
+
 

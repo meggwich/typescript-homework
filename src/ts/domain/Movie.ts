@@ -1,6 +1,7 @@
 import Buyable from "./Buyable";
 
 export default class Movie implements Buyable {
+    readonly multiplicable: boolean = false;
     constructor(
         readonly id: number,
         readonly name: string,
